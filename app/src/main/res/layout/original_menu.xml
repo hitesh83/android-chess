@@ -1,34 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:paddingStart="24dp"
+    android:paddingEnd="24dp">
 
-    <Button
-        android:id="@+id/startNewGame"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/menuContainer"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Play New Game"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.11"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintBottom_toBottomOf="parent">
 
-    <Button
-        android:id="@+id/playSavedGame"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/startNewGame"
-        android:text="Replay Saved Game"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.261"
-        tools:ignore="MissingConstraints" />
+        <Button
+            android:id="@+id/playTwoPlayers"
+            android:layout_width="280dp"
+            android:layout_height="56dp"
+            android:text="Play 2 Players"
+            android:textAllCaps="false"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/playAgainstBot"
+            android:layout_width="280dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:text="Play Against BOT"
+            android:textAllCaps="false"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/replaySavedGame"
+            android:layout_width="280dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:text="Replay Saved Game"
+            android:textAllCaps="false"
+            android:textSize="18sp" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
